@@ -1,0 +1,14 @@
+# docker run --name task-manager-api-pg -e POSTGRESQL_USERNAME=docker -e POSTGRESQL_PASSWORD=docker
+# -e POSTGRESQL_DATABASE=task-manager-api -p 5432:5432  bitnami/postgresql
+
+version: "3"
+
+services:
+  task-manager-api-pg:
+    image: bitnami/postgresql
+    environment:
+      - POSTGRESQL_USERNAME=docker
+      - POSTGRESQL_PASSWORD=docker
+      - POSTGRESQL_DATABASE=task-manager-api
+    ports:
+      - 5432:5432
